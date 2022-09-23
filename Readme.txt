@@ -11,7 +11,7 @@ CREATE TABLE wordtable(word varchar(45), chinese varchar(45), POS enum('n','v','
 
 
 Step3:
-Run the following commands in Powershell in directory "java_app_project"
+Run the following commands in Powershell in master dir
 
 cd java_project
 javac --module-path ../javafx-sdk-16/lib --add-modules=javafx.controls,javafx.fxml *.java
