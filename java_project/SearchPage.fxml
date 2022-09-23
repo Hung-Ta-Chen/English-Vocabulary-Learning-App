@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="475.0" style="-fx-background-color: ghostwhite;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_project.SearchPageController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="HomeButton" maxWidth="120.0" mnemonicParsing="false" onAction="#homeButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@house.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="searchButton" maxWidth="120.0" mnemonicParsing="false" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="addButton" maxHeight="80.0" maxWidth="120.0" mnemonicParsing="false" onAction="#addButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="settingButton" maxHeight="80.0" maxWidth="120.0" mnemonicParsing="false" onAction="#settingButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefWidth="120.0" style="-fx-background-color: none;" textFill="#fffdfd00">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: ghostwhite;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane maxHeight="55.0" prefHeight="55.0" style="-fx-background-color: lightskyblue;" VBox.vgrow="NEVER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <children>
+                  <HBox maxHeight="35.0" maxWidth="450.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: ghostwhite; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="6.0" top="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@search_icon.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="searchTextField" maxHeight="35.0" maxWidth="450.0" onKeyPressed="#enterPressed" prefHeight="35.0" prefWidth="420.0" style="-fx-background-color: ghostwhite; -fx-background-radius: 10;">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="429.0" prefWidth="475.0">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="425.0" prefWidth="475.0" spacing="20.0" style="-fx-background-color: ghostwhite;">
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="55.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

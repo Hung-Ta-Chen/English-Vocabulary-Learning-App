@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="475.0" style="-fx-background-color: ghostwhite;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_project.WordsetPageController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homeButton" maxWidth="120.0" mnemonicParsing="false" onAction="#homeButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@house.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="searchButton" maxWidth="120.0" mnemonicParsing="false" onAction="#searchButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="addButton" maxHeight="80.0" maxWidth="120.0" mnemonicParsing="false" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="settingButton" maxHeight="80.0" maxWidth="120.0" mnemonicParsing="false" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefWidth="120.0" style="-fx-background-color: none;" textFill="#fffdfd00">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" onDragDetected="#settingButtonPressed" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <BorderPane prefHeight="55.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" BorderPane.alignment="CENTER">
+         <center>
+            <Label fx:id="titleLabel" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </center>
+         <right>
+            <Button fx:id="addWordButton" maxWidth="50.0" mnemonicParsing="false" onAction="#addWordButtonPressed" onMouseEntered="#mouseEnterButton" onMouseExited="#mouseExitButton" prefWidth="50.0" style="-fx-background-color: null; -fx-effect: null;" text="Add" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Button>
+         </right>
+         <left>
+            <Button fx:id="quizButton" mnemonicParsing="false" onAction="#quizButtonPressed" onMouseEntered="#mouseEnterButton" onMouseExited="#mouseExitButton" style="-fx-background-color: none;" text="Quiz" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Button>
+         </left>
+      </BorderPane>
+   </top>
+   <center>
+      <VBox style="-fx-background-color: ghostwhite;" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: ghostwhite;" stylesheets="@background_color.css">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="483.0" prefWidth="474.0" spacing="20.0" style="-fx-background-color: ghostwhite;">
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Label fx:id="setSize" opacity="0.0" prefHeight="0.0" prefWidth="28.0" visible="false">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

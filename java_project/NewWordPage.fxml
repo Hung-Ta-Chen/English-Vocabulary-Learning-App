@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="475.0" style="-fx-background-color: ghostwhite;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_project.NewWordPageController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homeButton" maxWidth="120.0" mnemonicParsing="false" onAction="#homeButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@house.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="searchButton" maxWidth="120.0" mnemonicParsing="false" onAction="#searchButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="addButton" maxHeight="80.0" maxWidth="120.0" mnemonicParsing="false" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="settingButton" maxHeight="80.0" maxWidth="120.0" mnemonicParsing="false" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefWidth="120.0" style="-fx-background-color: none;" textFill="#fffdfd00">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" onDragDetected="#settingButtonPressed" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <BorderPane prefHeight="55.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" BorderPane.alignment="CENTER">
+         <center>
+            <Label text="New Word" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </center>
+         <right>
+            <Button fx:id="saveButton" maxWidth="50.0" mnemonicParsing="false" onAction="#saveButtonPressed" onMouseEntered="#mouseEnterButton" onMouseExited="#mouseExitButton" prefWidth="50.0" style="-fx-background-color: null; -fx-effect: null;" text="save" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Button>
+         </right>
+         <left>
+            <Button fx:id="cancelButton" maxWidth="53.0" mnemonicParsing="false" onAction="#cancelButtonPressed" onMouseEntered="#mouseEnterButton" onMouseExited="#mouseExitButton" prefHeight="21.0" prefWidth="53.0" style="-fx-background-color: null; -fx-effect: null;" text="cancel" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="11.0" />
+               </padding>
+            </Button>
+         </left>
+      </BorderPane>
+   </top>
+   <center>
+      <VBox maxHeight="430.0" maxWidth="400.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="wordTitleLabel" text="  Word" textFill="#6f86a3">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="wordTextfield" stylesheets="@textfield_style.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="transTitleLabel" text="  Chinese Translation" textFill="#6f86a3">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="transTextfield" stylesheets="@textfield_style.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label text="  Part of Speech" textFill="#6f86a3">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <VBox prefHeight="126.0" prefWidth="124.0" spacing="15.0">
+                     <children>
+                        <RadioButton fx:id="POSbutton1" mnemonicParsing="false" selected="true" text="Noun" textFill="#6f86a3">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="POS" />
+                           </toggleGroup>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="POSbutton2" mnemonicParsing="false" text="Adjective" textFill="#6f86a3" toggleGroup="$POS">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="POSbutton3" mnemonicParsing="false" text="Verb" textFill="#6f86a3" toggleGroup="$POS">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="POSbutton4" mnemonicParsing="false" text="Adverb" textFill="#6f86a3" toggleGroup="$POS">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="126.0" prefWidth="163.0" spacing="15.0">
+                     <children>
+                        <RadioButton fx:id="POSbutton5" mnemonicParsing="false" text="Pronoun" textFill="#6f86a3" toggleGroup="$POS">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="POSbutton6" mnemonicParsing="false" text="Preposition" textFill="#6f86a3" toggleGroup="$POS">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="POSbutton7" mnemonicParsing="false" text="Conjunction" textFill="#6f86a3" toggleGroup="$POS">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="POSbutton8" mnemonicParsing="false" text="Interjection" textFill="#6f86a3" toggleGroup="$POS">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="setNameLabel" opacity="0.0" textFill="WHITE" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="25.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

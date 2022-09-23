@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="475.0" style="-fx-background-color: ghostwhite;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_project.AddPageController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: ghostwhite;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="450.0" prefHeight="465.0" prefWidth="351.0" spacing="10.0">
+               <children>
+                  <Label fx:id="titleLabel" maxWidth="400.0" text="Title" textFill="#6f86a3">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="titleTextField" maxWidth="400.0" onKeyTyped="#textFieldCheckLength" prefHeight="25.0" prefWidth="400.0" />
+                  <Label maxWidth="400.0" text="Description" textFill="#6f86a3">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" top="15.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="describeTextArea" maxWidth="400.0" onKeyTyped="#textAreaCheckLength" pickOnBounds="false" prefHeight="246.0" prefWidth="400.0" style="-fx-wrap-text: true;" />
+               </children>
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" top="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children></VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homeButton" maxWidth="120.0" mnemonicParsing="false" onAction="#homeButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@house.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="searchButton" maxWidth="120.0" mnemonicParsing="false" onAction="#searchButtonPressed" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="addButton" maxHeight="80.0" maxWidth="120.0" mnemonicParsing="false" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefWidth="120.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="settingButton" maxHeight="80.0" maxWidth="120.0" mnemonicParsing="false" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefWidth="120.0" style="-fx-background-color: none;" textFill="#fffdfd00">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" onDragDetected="#settingButtonPressed" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <BorderPane prefHeight="55.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" BorderPane.alignment="CENTER">
+         <left>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#homeButtonPressed" onMouseEntered="#mouseEnterButton" onMouseExited="#mouseExitButton" style="-fx-background-color: null; -fx-effect: null;" text="Cancel" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="11.0" />
+               </padding>
+            </Button>
+         </left>
+         <right>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonPressed" onMouseEntered="#mouseEnterButton" onMouseExited="#mouseExitButton" style="-fx-background-color: null; -fx-effect: null;" text="Save" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Button>
+         </right>
+         <center>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Create" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+         </center>
+      </BorderPane>
+   </top>
+</BorderPane>
