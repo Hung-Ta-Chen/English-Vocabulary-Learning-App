@@ -1,3 +1,13 @@
+## Introduction
+A JavaFX app that help memorizing vocabublary.<br>
+
+## Features
+1. Customize your own directories and word sets.
+2. Able to specify the translation and POS of the word on the flashcard.
+3. Quiz option in every word sets.
+
+## Implementation Details
+
 Step1:
 Clone the repo to local
 
