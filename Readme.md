@@ -12,10 +12,10 @@ A JavaFX app that help memorizing vocabublary.<br>
 3. Implement the feature of dynamica scene switching and component update with JAvaFx.
 
 
-Step3: Run the following commands in Powershell in master dir.<br>
-       """<br>
-       cd java_project<br>
-       javac --module-path ../javafx-sdk-16/lib --add-modules=javafx.controls,javafx.fxml *.java<br>
-       cd ..<br>
-       java --module-path javafx-sdk-16/lib --add-modules=javafx.controls,javafx.fxml java_project.WordApp<br>
-       """<br>
+Step3: Run the following commands in Powershell in master dir.
+{bash}```
+cd java_project<br>
+javac --module-path ../javafx-sdk-16/lib --add-modules=javafx.controls,javafx.fxml *.java<br>
+cd ..<br>
+java --module-path javafx-sdk-16/lib --add-modules=javafx.controls,javafx.fxml java_project.WordApp<br>
+```
