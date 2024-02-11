@@ -13,7 +13,7 @@ A JavaFX app that help memorizing vocabublary.<br>
 
 
 Step3: Run the following commands in Powershell in master dir.
-{bash}```
+```{bash}
 cd java_project<br>
 javac --module-path ../javafx-sdk-16/lib --add-modules=javafx.controls,javafx.fxml *.java<br>
 cd ..<br>
